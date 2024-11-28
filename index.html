@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>XYL TestNet</title>
+    <style>
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+        body {
+            margin: 0;
+            padding: 0; 
+            top: 0; left: 0;   
+            font-family: "Open Sans", serif;
+            font-weight: 300;
+            background: url('bg_big.png');
+            background-color: black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            color: white;
+        }
+
+        /* XYL TestNet Text */
+        .xyl-header {
+            position: absolute;
+            top: 0%;
+            line-height: 0;
+            left: -50%;
+            opacity: 0;
+            animation: fadeInSlide 1.5s forwards;
+        }
+
+        @keyframes fadeInSlide {
+            to {
+                left: 7.5%;
+                opacity: 1;
+            }
+        }
+
+        /* Navbar */
+        .navbar {
+            position: absolute;
+            top: 1%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0);
+            border-radius: 10px;
+        }
+
+        .navbar a {
+            margin: 0 1.8rem;
+            text-decoration: none;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 360;
+        }
+
+        /* Feature Cards */
+        .feature-section {
+            position: absolute;
+            bottom: -15%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 1rem 0;
+        }
+
+        .feature-card {
+            width: 18vw;
+            height: 250px;
+            margin: 0 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-radius: 25px;
+            transform: scale(1.2);
+            border-radius: 25px;
+        }
+
+        .feature-icon {
+            font-size: 1rem;
+            margin: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        /* Button Styling */
+        .btn1 {
+            display: inline-block;
+            padding: 5px 20px; /* Adjust for size */
+            border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+            border-radius: 25px; /* Pill shape */
+            background: linear-gradient(135deg, #4a78b5, #688ab9); /* Gradient */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Smooth hover effect */
+        }
+
+        /* Hover Effect */
+        .btn1:hover {
+            background: linear-gradient(135deg, #688ab9, #4a78b5); /* Invert gradient */
+            border-color: rgba(255, 255, 255, 0.5); /* Slightly brighter border */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow */
+        }
+
+        #para1 {
+            width: 17.5vw;
+            position: absolute;
+            top: 12.5%;
+            left: 22.5%;
+        }
+
+a {
+    text-decoration: none;
+    color: #a3d9ff;
+}
+::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+* {
+    overflow: -moz-scrollbars-none; /* Hides the scrollbar */
+}
+
+/* Extra Section Styling */
+.extra-section {
+    position: absolute;
+    top: 110vh;
+    margin-top: 5rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    color: white;
+    //text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.extra-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.content-card {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 20rem;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+    </style>
+</head>
+<body>
+    <!-- XYL TestNet Header -->
+    <!-- <div class="xyl-header"><p style="font-size: 6rem; font-weight: 400;">XYL</p><p style="font-size: 5.5rem; font-weight: 300;">TestNet</p></div> -->
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#"><img src="head_Text.png"></a>
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Info</a>
+        <a href="#">TestMiner</a>
+        <a href="#">Explorer</a>
+        <a href="#" class="btn1">Connect</a>
+    </div>
+<div><img src="xyl-para1.png" id="para1"></div>
+    <!-- Feature Section -->
+    <div class="feature-section">
+        <div class="feature-card">
+            <div class="feature-title">PoW Consensus</div>
+            <div class="feature-icon">Proof-of-Work consensus with fast processing times, and a gas model ensuring fair and efficient use of network resources and miner reward.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-title">Hybrid EVM-Compatibility</div>
+            <div class="feature-icon">XYL supports Ethereum-style transactions, formats, blocks and RPC calls, enabling developers to leverage existing Ethereum tools and libraries.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-title">Smart Contracts</div>
+            <div class="feature-icon">Contracts can be easily programmed with XYL's own instruction set which is designed to be simple and straightforward yet secure.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-title">Faster Block Times</div>
+            <div class="feature-icon">A smart difficulty management system ensures consistent block times of 2-5 seconds no matter what the load. Experience near-instant transaction processing and rapid block propagation with XYL's fast block times.</div>
+        </div>
+    </div>
+<!-- Additional Section -->
+<div class="extra-section">
+<section id="xyl-testnet">
+    <h1 style="font-size: 3rem; font-weight: 400;">XYL TestNet</h1>
+    <ul>
+        XYL Testnet is a blockchain network created for testing and development purposes, 
+        specifically designed to evaluate the functionality and features of the XYL ecosystem. 
+        This testnet is used to simulate transactions, mining, and other blockchain operations 
+        before the official release of XYL's mainnet.
+    </ul>
+    
+    <h2>🌟 Key Features</h2>
+    <ul>
+        <b>PoW Consensus</b>: Proof-of-Work consensus with fast processing times.</li>
+        <b>RPC Access</b>: EVM-compatible RPC interface, providing an easy connection for interacting with the blockchain (e.g., MetaMask).</li>
+        <b>Smart Contracts</b>: Custom smart contracts to enable decentralized applications (dApps).</li>
+        <b>Fast Block Times (2-5 seconds)</b>: Experience near-instant transaction processing and rapid block propagation with XYL's fast block times.</li>
+        <b>Simple and Secure</b>: XYL Testnet is designed to have a simple interface while maintaining the security and integrity of the network.</li>
+        <b>EVM-Compatible</b>: XYL supports Ethereum-style transactions and smart contracts, enabling developers to leverage existing Ethereum tools and libraries.</li>
+    </ul>
+    
+    <h2>🧪 XYL Testnet Protocol</h2>
+    <ul>
+        <b>Block Time</b>: 2-5 seconds</li>
+        <b>Consensus Mechanism</b>: Proof-of-Work (PoW) with future plans for a hybrid-BFT variant.</li>
+        <b>Transaction Fees</b>: XYL's gas model ensures fair and efficient use of network resources and miner reward.</li>
+        <b>Network Speed</b>: Designed for high throughput with low latency.</li>
+    </ul>
+    
+    <h2>❓ How to Interact with XYL Testnet</h2>
+    <p>You can connect to it via MetaMask (or an EVM-compatible wallet) or interact with it directly through your Python environment.</p>
+    
+    <h3>🦊 MetaMask Setup</h3>
+    <ol>
+        Open MetaMask and go to <b>Settings</b> > <b>Networks</b> > <b>Add Network</b>.</li>
+        Enter the following details:
+            <ul>
+                <b>Network Name</b>: XYL TestNet
+                <b>New RPC URL</b>: <code>https://xyl-testnet.glitch.me/rpc/</code>
+                <b>Chain ID</b>: <code>6934</code>
+                <b>Currency Symbol</b>: XYL
+            </ul>
+        </li>
+        Save and connect MetaMask to the XYL TestNet.</li>
+    </ol>
+    
+    <h2>💡 Key Benefits for Developers</h2>
+    <ul>
+        <b>Test New Features Safely</b>: Test your projects on the XYL Testnet without the risk of spending actual money.
+        <b>Faucets</b>: Get free test tokens to test your dApps or projects without spending actual valuable tokens.
+        <b>Simple & Straightforward Contract Codes</b>: Contracts can be easily programmed with XYL's own instruction set.
+        <b>Python support</b>: Interaction with the network is straightforward for developers due to Python libraries programmed exclusively for making interaction with the XYL ecosystem easier.
+    </ul>
+    
+    <h2>🛣 Roadmap</h2>
+    <p><b>Mainnet (Coming Soon)</b>: The XYL Testnet will serve as the foundation for the upcoming XYL mainnet. Stay tuned for the official launch.</p>
+    
+    <h2>📝 License</h2>
+    <p>XYL Testnet is licensed under the AGPL License. Any modifications or improvements made to the software, especially if used over a network, must be shared with the community.</p>
+    
+    <h2>🤝 Contributing</h2>
+    <p>Feel free to experiment with the XYL Testnet and provide feedback or suggestions for improvements. Contributions are welcome!</p>
+    
+    <h2>🚀 Join the XYL Testnet</h2>
+    <p>If you encounter any issues or have any questions, please visit the <a href="#">official documentation</a>, or reach out via the <a href="#">Discord</a> server.</p>
+</section>
+</div>
+</body>
+</html>
