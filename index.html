@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XYL TestNet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -23,258 +25,244 @@
       "keywords": "Blockchain, TestNet, XYL, Cryptocurrency, Smart Contracts, EVM Compatibility, Ethereum, Crypto, EVM, Testnet, XYL Testnet, XYL Mainnet, XYL TestNet, XYL MainNet, XYL TestNet, XYL blockchain, testnet, blockchain testing, EVM compatibility, Ethereum testnet, cryptocurrency testnet, XYL Mainnet, dynamic gas pricing, custom Proof of Work, smart contract testing, decentralized apps, blockchain development, blockchain miner, XYL gas model, XYL mining, XYL explorer"
     }
     </script>
-    <title>XYL TestNet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-      html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      }
-      body {
-      margin: 0;
-      padding: 0; 
-      top: 0; left: 0;   
-      font-family: "Open Sans", serif;
-      font-weight: 300;
-      background: url('bg_big.png') no-repeat;
-      background-color: black;
-      animation: blurIn 1s forwards;
-      background-size: cover;
-      scroll-behavior: smooth;
-      color: white;
-      }
-      @keyframes blurIn {
-      0% {
-      filter: blur(10px);
-      opacity: 0;
-      }
-      100% {
-      filter: blur(0);
-      opacity: 1;
-      }
-      }
-      /* XYL TestNet Text */
-      .xyl-header {
-      position: absolute;
-      top: 0%;
-      line-height: 0;
-      left: -50%;
-      opacity: 0;
-      animation: fadeInSlide 1.5s forwards;
-      }
-      @keyframes fadeInSlide {
-      to {
-      left: 7.5%;
-      opacity: 1;
-      }
-      }
-      /* Navbar */
-      .navbar {
-      position: absolute;
-      top: 1%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-      background: rgba(0, 0, 0, 0);
-      border-radius: 10px;
-      }
-      .navbar a {
-      margin: 0 1.8rem;
-      text-decoration: none;
-      color: white;
-      font-size: 1.25rem;
-      font-weight: 360;
-      }
-      /* Feature Cards */
-      .feature-section {
-      position: absolute;
-      bottom: -15%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      padding: 1rem 0;
-      }
-      .feature-card {
-      width: 18vw;
-      height: 250px;
-      margin: 0 1rem;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(1px);
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.3s ease;
-      }
-      .feature-card:hover {
-      border-radius: 25px;
-      transform: scale(1.2);
-      border-radius: 25px;
-      }
-      .feature-icon {
-      font-size: 1rem;
-      margin: 1rem;
-      }
-      .feature-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-top: 1rem;
-      }
-      /* Button Styling */
-      .btn1 {
-      display: inline-block;
-      padding: 5px 20px; /* Adjust for size */
-      border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
-      border-radius: 25px; /* Pill shape */
-      background: linear-gradient(135deg, #4a78b5, #688ab9); /* Gradient */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-      color: white;
-      font-size: 1rem;
-      font-weight: bold;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s ease; /* Smooth hover effect */
-      }
-      /* Hover Effect */
-      .btn1:hover {
-      background: linear-gradient(135deg, #688ab9, #4a78b5); /* Invert gradient */
-      border-color: rgba(255, 255, 255, 0.5); /* Slightly brighter border */
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow */
-      }
-      #para1 {
-      width: 17.5vw;
-      position: absolute;
-      top: 12.5%;
-      left: 22.5%;
-      }
-      a {
-      text-decoration: none;
-      color: #a3d9ff;
-      }
-      ::-webkit-scrollbar {
-      display: none; /* Hides the scrollbar */
-      }
-      * {
-      overflow: -moz-scrollbars-none; /* Hides the scrollbar */
-      }
-      /* Extra Section Styling */
-      .extra-section {
-      position: absolute;
-      top: 110vh;
-      margin-top: 5rem;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0);
-      backdrop-filter: blur(10px);
-      border-radius: 10px;
-      color: white;
-      //text-align: center;
-      }
-      .section-title {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-      }
-      .extra-content {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- XYL TestNet Header -->
-    <!-- <div class="xyl-header"><p style="font-size: 6rem; font-weight: 400;">XYL</p><p style="font-size: 5.5rem; font-weight: 300;">TestNet</p></div> -->
-    <!-- Navbar -->
-    <div class="navbar">
-      <a href="index.html"><img src="head_Text.png"></a>
-      <a href="index.html">Home</a>
-      <a href="#feature-section">Features</a>
-      <a href="#extra-section">Info</a>
-      <a href="https://github.com/debxylen/XYL-TestMiner">TestMiner</a>
-      <a href="https://debxylen.github.io/BlockExplorer/">Explorer</a>
-      <a href="#connect-info" class="btn1">Connect</a>
-    </div>
-    <div><img src="xyl-para1.png" id="para1"></div>
-    <!-- Feature Section -->
-    <div class="feature-section" id="feature-section">
-      <div class="feature-card">
-        <div class="feature-title">PoW Consensus</div>
-        <div class="feature-icon">Proof-of-Work consensus with fast processing times, and a gas model ensuring fair and efficient use of network resources and miner reward.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-title">Hybrid EVM-Compatibility</div>
-        <div class="feature-icon">XYL supports Ethereum-style transactions, formats, blocks and RPC calls, enabling developers to leverage existing Ethereum tools and libraries.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-title">Smart Contracts</div>
-        <div class="feature-icon">Contracts can be easily programmed with XYL's own instruction set which is designed to be simple and straightforward yet secure.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-title">Faster Block Times</div>
-        <div class="feature-icon">A smart difficulty management system ensures consistent block times of 2-5 seconds no matter what the load. Experience near-instant transaction processing and rapid block propagation with XYL's fast block times.</div>
-      </div>
-    </div>
-    <!-- Additional Section -->
-    <div class="extra-section" id="extra-section">
-      <section id="xyl-testnet">
-        <div style="text-align: center;">
-          <h1 style="font-size: 3rem; font-weight: 400;">About XYL TestNet</h1>
-        </div>
-        <p>
-          XYL Testnet is a blockchain network created for testing and development purposes, specifically designed to evaluate the functionality and features of the XYL ecosystem. This testnet is used to simulate transactions, mining, and other blockchain operations before the official release of XYL's mainnet.
-        </p>
-        <h2>🌟 Key Features</h2>
-        <p><b>Overview</b>: EIP155, EIP1559, XYL-DynaPoW, Smart Contracts, Custom Gas Model, XYL-VM, Dynamic Difficulty Adjustment, Low-Latency Transactions.</p>
-        <ul>
-          <li><b>PoW Consensus</b>: Proof-of-Work consensus with fast processing times.</li>
-          <li><b>RPC Access</b>: EVM-compatible RPC interface, providing an easy connection for interacting with the blockchain (e.g., MetaMask).</li>
-          <li><b>Smart Contracts</b>: Custom smart contracts to enable decentralized applications (dApps).</li>
-          <li><b>Fast Block Times (2-5 seconds)</b>: Experience near-instant transaction processing and rapid block propagation with XYL's fast block times.</li>
-          <li><b>Simple and Secure</b>: XYL Testnet is designed to have a simple interface while maintaining the security and integrity of the network.</li>
-          <li><b>EVM-Compatible</b>: XYL supports Ethereum-style transactions and smart contracts, enabling developers to leverage existing Ethereum tools and libraries.</li>
-        </ul>
-        <h2>🧪 XYL Testnet Protocol</h2>
-        <ul>
-          <li><b>Block Time</b>: 2-5 seconds</li>
-          <li><b>Consensus Mechanism</b>: Proof-of-Work (PoW) with future plans for a hybrid-BFT variant.</li>
-          <li><b>Transaction Fees</b>: XYL's gas model ensures fair and efficient use of network resources and miner reward.</li>
-          <li><b>Network Speed</b>: Designed for high throughput with low latency.</li>
-        </ul>
-        <h2 id="connect-info">❓ How to Connect/Interact with XYL Testnet</h2>
-        <p>You can connect to it via MetaMask (or an EVM-compatible wallet) or interact with it directly through your Python environment.</p>
-        <h3>🦊 Network Information</h3>
-         <ul>
-              <li><b>Network Name</b>: XYL TestNet</li>
-              <li><b>Default RPC URL</b>: <a>https://xyl-testnet.glitch.me/rpc/</a></li>
-              <li><b>Chain ID</b>: <code>6934</code></li>
-              <li><b>Currency Symbol</b>: XYL</li>
-              <li><b>Block Explorer URL</b>: <a href="https://debxylen.github.io/BlockExplorer">https://debxylen.github.io/BlockExplorer</a></li>
-         </ul>
-        <h2>💡 Key Benefits for Developers</h2>
-        <ul>
-          <li><b>Test New Features Safely</b>: Test your projects on the XYL Testnet without the risk of spending actual money.</li>
-          <li><b>Faucets</b>: Get free test tokens to test your dApps or projects without spending actual valuable tokens.</li>
-          <li><b>Simple & Straightforward Contract Codes</b>: Contracts can be easily programmed with XYL's own instruction set.</li>
-          <li><b>Python support</b>: Interaction with the network is straightforward for developers due to Python libraries programmed exclusively for making interaction with the XYL ecosystem easier.</li>
-        </ul>
-        <h2>🛣 Roadmap</h2>
-        <li><b>Mainnet (Coming Soon)</b>: The XYL TestNet will serve as the foundation for the upcoming XYL MainNet.</li>
-        <h2>📝 License</h2>
-        <li>XYL Testnet is licensed under the <a>AGPL License</a>. Any modifications or improvements made to the software, especially if used over a network, must be shared with the community.</li>
-        <h2>🤝 Contributing</h2>
-        <li>Feel free to experiment with the XYL Testnet and provide feedback or suggestions for improvements. Contributions are welcome!</li>
-        <h2>🚀 Join the XYL Testnet</h2>
-        <li>If you encounter any issues or have any questions, please feel free to open a <a href="https://github.com/debxylen/XYL-Testnet/discussions">discussion</a> or <a href="https://github.com/debxylen/XYL-Testnet/issues">issue</a>. <!-- visit the <a>official documentation</a>, or reach out via the <a>Discord</a> server.</li> -->
-      </section>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #fff;
+            background: url('bg1.png') no-repeat;
+            background-size: 100%;
+            background-color: #11050f;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: rgba(0,0,0, 0.01); // #111;
+            padding: 5px 0; 
+            margin-bottom: 0;
+            padding-bottom: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: transform 0.5s ease-in-out;
+            height: 8vh;
+            width: 100vw;
+            backdrop-filter: blur(5px);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #1e90ff;
+        }
+
+        nav.hide {
+            transform: translateY(-100%);
+        }
+
+        /* Hero Section */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 0 20px;
+            color: #fff;
+        }
+        header .hero-text {
+            max-width: 600px;
+            margin-left: 30px;
+            text-align: left;
+        }
+        header .h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #1e90ff;
+        }
+        header p {
+            font-size: 1.6rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .cta-button {
+            background-color: #1e90ff;
+            color: #000;
+            padding: 14px 30px;
+            font-size: 1.4rem;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #004c8c;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            background: #222;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 40px auto;
+            max-width: 1000px;
+            border-radius: 12px;
+        }
+        section h2 {
+            font-size: 2.5rem;
+            color: #1e90ff;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            font-size: 1.3rem;
+            padding: 12px 0;
+            line-height: 1.8;
+        }
+        ul li::before {
+            content: ''; // 🌟
+            margin-right: 12px;
+        }
+        
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            color: #fff;
+        }
+        footer a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                height: auto;
+            }
+            header .hero-text {
+                margin-top: 10vh;
+                margin-left: 0;
+                margin-bottom: 30px;
+            }
+            header h1 {
+                font-size: 3rem;
+            }
+            header p {
+                font-size: 1.4rem;
+            }
+            nav ul li {
+                margin: 0 auto;
+            }
+            #headtext { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="navbar">
+    <ul>
+      <li id="headtext"><a href="index.html"><img src="head_Text.png" style="height: 60%; margin-bottom: 0; padding-bottom: 0;"></a><li>
+      <li><a href="index.html">Home</a><li>
+      <li><a href="#features">Features</a><li>
+      <li><a href="faucet.html">Faucet</a><li>
+      <li><a href="https://github.com/debxylen/XYL-TestMiner">TestMiner</a><li>
+      <li><a href="https://debxylen.github.io/BlockExplorer/">Explorer</a><li>
+      <li><a href="#get-started">Connect</a><li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<header id="home">
+    <div class="hero-text">
+        <p class="h1"><strong>XYL</strong> TestNet</p>
+        <p>Powering the future of blockchain with fast, secure, and scalable test environments for developers</p>
+        <a href="#get-started" class="cta-button">Get Started</a>
     </div>
-  </body>
+</header>
+
+<!-- Key Features -->
+<section id="features">
+    <h2>Key Features</h2>
+    <ul>
+        <li><strong>PoW Consensus:</strong> Fast, secure, and decentralized with Proof-of-Work</li>
+        <li><strong>RPC Access:</strong> Seamless integration with MetaMask and other EVM-compatible wallets</li>
+        <li><strong>Smart Contracts:</strong> Easily deploy and test custom dApps with smart contracts</li>
+        <li><strong>Fast Block Times:</strong> 2-5 seconds for near-instant transaction processing</li>
+        <li><strong>EVM Compatibility:</strong> Leverage Ethereum tools and libraries</li>
+    </ul>
+</section>
+
+<!-- How to Get Started -->
+<section id="get-started">
+    <h2>Network Info</h2>
+    <ul>
+            <li><strong>Network Name:</strong> XYL TestNet</li>
+            <li><strong>New RPC URL:</strong> <code>https://xyl-testnet.glitch.me/rpc/</code></li>
+            <li><strong>Chain ID:</strong> 6934</li>
+            <li><strong>Currency Symbol:</strong> XYL</li>
+    </ol>
+</section>
+
+<!-- Roadmap -->
+<section id="roadmap">
+    <h2>Roadmap</h2>
+    <p><strong>Mainnet (Coming Soon):</strong> Stay tuned for the official launch of XYL's mainnet!</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 XYL Testnet. All rights reserved. Licensed under the <a href="#">AGPL License</a>.</p>
+    <p><a href="#documentation">Official Documentation</a> | <a href="#discord">Join Discord</a></p>
+</footer>
+
+
+<script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > window.innerHeight * 1.1) {
+                navbar.classList.add('hide');
+            } else {
+                navbar.classList.remove('hide');
+            }
+        });
+</script>
+
+</body>
 </html>

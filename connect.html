@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+    <title>XYL TestNet Documentation</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 1em;
+        }
+
+        /* Layout Styling */
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            color: #007acc;
+            margin-top: 10vh;
+            font-size: 2em;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #007acc;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 1em;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Styling */
+        .content {
+            margin-top: 5vh;
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .content section {
+            margin-bottom: 40px;
+        }
+
+        .content h2 {
+            color: #007acc;
+            margin-bottom: 10px;
+        }
+
+        .content p, li {
+            margin-bottom: 1em;
+        }
+
+        .content ol, ul {
+            padding-left: 20px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Navbar Styling */
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 10px 20px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #007acc;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .navlinks {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #nav_head {
+            margin: 0; margin-right: 60vw;
+        }
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            #nav_head { font-size: 1em; margin-right: 0; }
+            .navlinks { display: none; font-size: 0.8em; } 
+            .sidebar { display: none; }
+            .content { margin-top: 1vh; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <h1 id="nav_head">XYL TestNet Docs</h1>
+        <div class="navlinks">
+        <a href="index.html">Homepage</a>
+        <a href="https://debxylen.github.io/BlockExplorer/">Block Explorer</a>
+        <a href="https://github.com/debxylen/XYL-TestMiner">Miner</a>
+        <a href="faucet.html">Faucet</a>
+        </div>
+    </nav>
+    <!-- Main Layout -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>XYL Docs</h2>
+            <a href="#setup">Setup</a>
+            <a href="#faucet">Faucet</a>
+            <a href="#rpc">RPC</a>
+            <a href="#faq">FAQ</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <section id="setup">
+                <h2>MetaMask Setup</h2>
+                <p>Follow these steps to connect to the XYL TestNet:</p>
+                <ol>
+                    <li>Open MetaMask and navigate to <strong>Networks > Add a Custom Network</strong>.</li>
+                    <li>Enter the following details:
+                        <ul>
+                            <li><strong>Network Name:</strong> XYL TestNet</li>
+                            <li><strong>Default RPC URL:</strong> https://xyl-testnet.glitch.me/rpc/</li>
+                            <li><strong>Chain ID:</strong> 6934</li>
+                            <li><strong>Native Currency Symbol:</strong> XYL</li>
+                            <li><strong>Block Explorer URL:</strong> https://debxylen.github.io/BlockExplorer/</li>
+                        </ul>
+                    </li>
+                    <li>Save and connect MetaMask to the XYL TestNet.</li>
+                </ol>
+            </section>
+
+            <section id="rpc">
+                <h2>RPC Details</h2>
+                <p>Use the following RPC details to connect your application to the XYL TestNet:</p>
+                <ul>
+                    <li><strong>RPC URL:</strong> https://xyl-testnet.glitch.me/rpc/</li>
+                    <li><strong>Chain ID:</strong> 6934</li>
+                    <li><strong>Currency Symbol:</strong> XYL</li>
+                </ul>
+                <p>Use any EVM-compatible wallet or library (like Web3.js) to interact with the testnet.<br>You can also view Ethereum RPC 2.0 documentation for more details on how to interact with the RPC.</p>
+            </section>
+
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 XYL TestNet | <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>

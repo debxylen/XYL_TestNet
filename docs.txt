@@ -1,0 +1,20 @@
+            <section id="benefits">
+                <h2>Key Benefits</h2>
+                <p>Why choose XYL TestNet for your blockchain testing needs?</p>
+                <ul>
+                    <li><strong>Free Test Tokens:</strong> Experiment without spending real money.</li>
+                    <li><strong>EVM Compatibility:</strong> Leverage existing Ethereum tools and libraries.</li>
+                    <li><strong>Fast Block Times:</strong> Enjoy near-instant transaction processing (2-5 seconds).</li>
+                    <li><strong>Custom Smart Contracts:</strong> Deploy and test decentralized applications (dApps) effortlessly.</li>
+                </ul>
+            </section>
+
+            <section id="faq">
+                <h2>Frequently Asked Questions (FAQ)</h2>
+                <p><strong>Q: Is XYL TestNet free to use?</strong></p>
+                <p>A: Yes! You can use it for testing and development purposes without any fees.</p>
+                <p><strong>Q: Can I deploy smart contracts?</strong></p>
+                <p>A: Absolutely! XYL TestNet is EVM-compatible, making it easy to deploy and test smart contracts.</p>
+                <p><strong>Q: Where can I get test tokens?</strong></p>
+                <p>A: Visit the faucet to claim free XYL TestNet tokens. (Faucet link coming soon!)</p>
+            </section>
