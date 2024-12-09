@@ -18,3 +18,55 @@
                 <p><strong>Q: Where can I get test tokens?</strong></p>
                 <p>A: Visit the faucet to claim free XYL TestNet tokens. (Faucet link coming soon!)</p>
             </section>
+<section id="rpc-usage">
+    <h2>Using RPC to Interact with XYL TestNet</h2>
+    <p>The XYL TestNet provides an EVM-compatible RPC interface, making it easy to connect and interact with the blockchain. Here's how you can use it:</p>
+    
+    <h3>Step 1: Add RPC to Your Application</h3>
+    <p>Use the following details to configure your connection:</p>
+    <ul>
+        <li><strong>RPC URL:</strong> <code>https://xyl-testnet.glitch.me/rpc/</code></li>
+        <li><strong>Chain ID:</strong> <code>6934</code></li>
+        <li><strong>Currency Symbol:</strong> <code>XYL</code></li>
+    </ul>
+    
+    <h3>Step 2: Using Web3.js or ethers.js</h3>
+    <p>Connect to the RPC using JavaScript libraries like Web3.js or ethers.js. Example for Web3.js:</p>
+    <pre>
+<code>
+// Install Web3.js via npm
+// npm install web3
+
+const Web3 = require('web3');
+const rpcUrl = "https://xyl-testnet.glitch.me/rpc/";
+const web3 = new Web3(rpcUrl);
+
+web3.eth.getBlockNumber().then(blockNumber => {
+    console.log("Current Block Number:", blockNumber);
+});
+</code>
+    </pre>
+    
+    <h3>Step 3: Using Python</h3>
+    <p>Use the `web3` Python library to interact with the network:</p>
+    <pre>
+<code>
+# Install the web3 library
+# pip install web3
+
+from web3 import Web3
+
+rpc_url = "https://xyl-testnet.glitch.me/rpc/"
+web3 = Web3(Web3.HTTPProvider(rpc_url))
+
+if web3.is_connected():
+    print("Connected to XYL TestNet")
+    print("Current Block Number:", web3.eth.block_number)
+</code>
+    </pre>
+    
+    <h3>Step 4: Wallet Integration</h3>
+    <p>Configure wallets like MetaMask to connect with the XYL TestNet by entering the RPC details in the network settings.</p>
+    
+    <p>For detailed guidance, visit our <a href="#setup">MetaMask Setup</a> section.</p>
+</section>
