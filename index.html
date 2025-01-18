@@ -1,287 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>XYL TestNet</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <meta name="description" content="Explore XYL TestNet, an advanced blockchain test network with fast block times, smart contracts, and EVM compatibility.">
-    <meta name="keywords" content="Blockchain, TestNet, XYL, Cryptocurrency, Smart Contracts, EVM Compatibility, Ethereum, Crypto, EVM, Testnet, XYL Testnet, XYL Mainnet, XYL TestNet, XYL MainNet, XYL TestNet, XYL blockchain, testnet, blockchain testing, EVM compatibility, Ethereum testnet, cryptocurrency testnet, XYL Mainnet, dynamic gas pricing, custom Proof of Work, smart contract testing, decentralized apps, blockchain development, blockchain miner, XYL gas model, XYL mining, XYL explorer">
-    <meta property="og:title" content="XYL TestNet">
-    <meta property="og:description" content="Explore XYL TestNet, an advanced blockchain test network with fast block times, smart contracts, and EVM compatibility.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/debxylen/XYL-Testnet/refs/heads/main/icon_t.png">
-    <meta property="og:url" content="https://debxylen.github.io/XYL_TestNet/">
-    <meta property="og:type" content="website">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "XYL TestNet",
-      "url": "https://debxylen.github.io/XYL_TestNet/",
-      "description": "Explore XYL TestNet, an advanced blockchain test network with fast block times, smart contracts, and EVM compatibility.",
-      "keywords": "Blockchain, TestNet, XYL, Cryptocurrency, Smart Contracts, EVM Compatibility, Ethereum, Crypto, EVM, Testnet, XYL Testnet, XYL Mainnet, XYL TestNet, XYL MainNet, XYL TestNet, XYL blockchain, testnet, blockchain testing, EVM compatibility, Ethereum testnet, cryptocurrency testnet, XYL Mainnet, dynamic gas pricing, custom Proof of Work, smart contract testing, decentralized apps, blockchain development, blockchain miner, XYL gas model, XYL mining, XYL explorer"
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        if (console && console.warn) {
+          const originalWarn = console.warn;
+          console.warn = function (message, ...args) {
+            if (message.includes('cdn.tailwindcss.com should not be used in production')) {
+              return;
+            }
+            originalWarn.call(console, message, ...args);
+          };
+        }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.FontAwesomeConfig = {
+            autoReplaceSvg: "nest", // Options: 'nest', 'remove', 'replace'
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
+            font-family: "Poppins Light", sans-serif;
             scroll-behavior: smooth;
         }
 
-        body {
-            font-family: "Poppins", sans-serif;
-            color: #fff;
-            background: url('bg1.png') no-repeat;
-            background-size: 100%;
-            background-color: #11050f;
-            line-height: 1.6;
+        ::-webkit-scrollbar {
+            display: none;
         }
 
-        /* Navbar */
-        nav {
-            background-color: rgba(0,0,0, 0.01); // #111;
-            padding: 5px 0; 
-            margin-bottom: 0;
-            padding-bottom: 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            transition: transform 0.5s ease-in-out;
-            height: 8vh;
-            width: 100vw;
-            backdrop-filter: blur(5px);
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-        nav ul li {
-            margin: 0 20px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #1e90ff;
+        .highlighted-section {
+            outline: 2px solid #3f20fb;
+            background-color: rgba(63, 32, 251, 0.1);
         }
 
-        nav.hide {
-            transform: translateY(-100%);
-        }
-
-        /* Hero Section */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100vh;
-            padding: 0 20px;
-            color: #fff;
-        }
-        header .hero-text {
-            max-width: 600px;
-            margin-left: 30px;
-            text-align: left;
-        }
-        header .h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            color: #1e90ff;
-        }
-        header p {
-            font-size: 1.6rem;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-        .cta-button {
-            background-color: #1e90ff;
-            color: #000;
-            padding: 14px 30px;
-            font-size: 1.4rem;
-            border-radius: 50px;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #004c8c;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 60px 20px;
-            text-align: center;
-            background: #222;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin: 40px auto;
-            max-width: 1000px;
-            border-radius: 12px;
-        }
-        section h2 {
-            font-size: 2.5rem;
-            color: #1e90ff;
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            font-size: 1.3rem;
-            padding: 12px 0;
-            line-height: 1.8;
-        }
-        ul li::before {
-            content: ''; // 🌟
-            margin-right: 12px;
-        }
-        
-        footer {
-            background: #111;
-            text-align: center;
-            padding: 20px;
-            font-size: 1rem;
-            color: #fff;
-        }
-        footer a {
-            color: #1e90ff;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: left;
-                height: auto;
-            }
-            header .hero-text {
-                margin-top: 10vh;
-                margin-left: 0;
-                margin-bottom: 30px;
-            }
-            header h1 {
-                font-size: 3rem;
-            }
-            header p {
-                font-size: 1.4rem;
-            }
-            nav ul li {
-                margin: 0 auto;
-            }
-            #headtext { display: none; }
-        }
-        a {
-            color: #1e90ff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        .unselectable {
+            user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
         }
     </style>
 </head>
-<body>
 
-<!-- Navbar -->
-<nav id="navbar">
-    <ul>
-      <li id="headtext"><a href="index.html"><img src="head_Text.png" style="height: 60%; margin-bottom: 0; padding-bottom: 0;"></a><li>
-      <li><a href="index.html">Home</a><li>
-      <li><a href="#features">Features</a><li>
-      <li><a href="faucet.html">Faucet</a><li>
-      <li><a href="https://github.com/debxylen/XYL-TestMiner">TestMiner</a><li>
-      <li><a href="https://debxylen.github.io/BlockExplorer/">Explorer</a><li>
-      <li><a href="#get-started">Connect</a><li>
-    </ul>
-</nav>
+<body class="h-full text-base-content">
+    <div id="main" class="bg-gradient-to-b from-gray-900 to-black text-white">
+        <header id="header" class="fixed w-full z-50 bg-opacity-90 bg-gray-900 backdrop-blur-sm">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <img src="head.webp" class="unselectable" draggable="false"></img>
+                        <!-- <span class="text-xl font-bold">XYL TestNet</span> -->
+                    </div>
+                    <nav class="hidden md:flex space-x-8">
+                        <a href="index.html" class="hover:text-blue-500 transition cursor-pointer">Home</a>
+                        <a href="#features" class="hover:text-blue-500 transition cursor-pointer">Features</a>
+                        <a href="faucet.html" class="hover:text-blue-500 transition cursor-pointer">Documentation</a>
+                        <a href="https://debxylen.github.io/BlockExplorer/" class="hover:text-blue-500 transition cursor-pointer">Explorer</a>
+                        <a href="https://github.com/debxylen/XYL-TestMiner" class="hover:text-blue-500 transition cursor-pointer">TestMiner</a>
+                    </nav>
+                    <a href="#cta"><button class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg transition">
+                            Connect
+                        </button></a>
+                </div>
+            </div>
+        </header>
+        <section id="hero" class="h-[100vh] flex items-center">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                        Experience the Power of <span class="text-blue-500">XYL TestNet</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-8">
+                        Designed for speed, cost-efficiency, easy interaction, and flexibility.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#cta"><button class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg text-lg transition">
+                                Get Started
+                            </button></a>
+                        <a href="docs.html"><button class="border border-blue-600 hover:bg-blue-600/10 px-8 py-3 rounded-lg text-lg transition">
+                                Read Docs
+                            </button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-800/50 p-8 rounded-xl">
+                        <i class="fa-solid fa-bolt text-3xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Speed</h3>
+                        <p class="text-gray-400">Experience fast, near-instant transactions with 2-5 second block times, all while maintaining strong security.</p>
+                    </div>
 
-<!-- Hero Section -->
-<header id="home">
-    <div class="hero-text">
-        <p class="h1"><strong>XYL</strong> TestNet</p>
-        <p>Powering the future of blockchain with fast, secure, and scalable test environments for developers</p>
-        <a href="#get-started" class="cta-button">Get Started</a>
+                    <div class="bg-gray-800/50 p-8 rounded-xl">
+                        <i class="fa-solid fa-coins text-3xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Fair Gas Model</h3>
+                        <p class="text-gray-400">Enjoy low fees, fair miner rewards, and protection against spam with our optimized gas model.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 p-8 rounded-xl">
+                        <i class="fa-solid fa-code text-3xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Developer Friendly</h3>
+                        <p class="text-gray-400">Easily interact with the XYL network using dedicated Python libraries for seamless development.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 p-8 rounded-xl">
+                        <i class="fa-solid fa-balance-scale text-3xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Balanced Hybrid Model</h3>
+                        <p class="text-gray-400">A hybrid model balancing speed, security, and decentralization, ideal for quick and easy flow of assets.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 p-8 rounded-xl">
+                        <i class="fa-solid fa-shield text-3xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Secure</h3>
+                        <p class="text-gray-400">Security is a top priority, with measures like node-side validation ensuring a reliable and secure network.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 p-8 rounded-xl">
+                        <i class="fa-solid fa-code text-3xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">EVM Compatible</h3>
+                        <p class="text-gray-400">Integrate easily with Ethereum tools, wallets, and libraries, thanks to full EVM compatibility.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="stats" class="py-20 bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold text-blue-500 mb-2">2-5s</div>
+                        <div class="text-gray-400">Block Time</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-500 mb-2">0.3469%</div>
+                        <div class="text-gray-400">Avg. Gas Fee</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-500 mb-2">0.2069%</div>
+                        <div class="text-gray-400">Incentive for miners</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-500 mb-2">6,942,340 XYL</div>
+                        <div class="text-gray-400">Total Supply</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cta" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="bg-blue-600/20 rounded-2xl p-12 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to experience XYL TestNet?</h2>
+                    <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                        Join us on a innovative, fast, efficient blockchain network built for real-world applications.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="https://chainid.network/chain/6934/"><button class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg text-lg transition">
+                                Connect
+                            </button></a>
+                        <a href="docs.html"><button class="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg text-lg transition">
+                                View Documentation
+                            </button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer" class="bg-gray-900 pt-12 pb-5">
+            <div class="container mx-auto px-4 pt-12 pb-5">
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <i class="text-2xl text-neutral-300" data-fa-i2svg=""></i>
+                            <span class="text-xl font-bold">XYL TestNet</span>
+                        </div>
+                        <p class="text-gray-400">Empowering a better blockchain experience.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Resources</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <a href="https://debxylen.github.io/BlockExplorer/">
+                                <li><span class="hover:text-blue-500 cursor-pointer">Explorer</span></li>
+                            </a>
+                            <a href="https://github.com/debxylen/XYL-TestMiner">
+                                <li><span class="hover:text-blue-500 cursor-pointer">TestMiner</span></li>
+                            </a>
+                            <a href="docs.html#faq">
+                                <li><span class="hover:text-blue-500 cursor-pointer">FAQ and About</span></li>
+                            </a>
+                            <a href="">
+                                <li><span class="hover:text-blue-500 cursor-pointer">Whitepaper</span></li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Community</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <a href="">
+                                <li><span class="hover:text-blue-500 cursor-pointer">Discord</span></li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Developers</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <a href="docs.html">
+                                <li><span class="hover:text-blue-500 cursor-pointer">Documentation</span></li>
+                            </a>
+                            <a href="https://github.com/debxylen/XYL-Testnet">
+                                <li><span class="hover:text-blue-500 cursor-pointer">Source Code</span></li>
+                            </a>
+                            <a href="faucet.html">
+                                <li><span class="hover:text-blue-500 cursor-pointer">Faucet</span></li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                    <p>&copy; 2025 XYL TestNet. Licensed under the <span class="text-blue-500 cursor-pointer"><a href="https://raw.githubusercontent.com/debxylen/XYL_TestNet/main/LICENSE">AGPL License</a></span>.</p>
+                    <p><span class="text-blue-500 cursor-pointer"><a href="https://github.com/debxylen/XYL_TestNet">Webpage Source Code</a></span> | <span class="text-blue-500 cursor-pointer"><a href="https://github.com/debxylen">@debxylen</a></span></p>
+                </div>
+            </div>
+        </footer>
     </div>
-</header>
-
-<!-- Key Features -->
-<section id="features">
-    <h2>Key Features</h2>
-    <ul>
-        <li><strong>PoW Consensus:</strong><br> Fast, secure, and decentralized with Proof-of-Work</li>
-        <li><strong>RPC Access:</strong><br> Seamless integration with MetaMask and other EVM-compatible wallets</li>
-        <li><strong>Smart Contracts:</strong><br> Easily deploy and test custom dApps with smart contracts</li>
-        <li><strong>Fast Block Times:</strong><br> 2-5 seconds for near-instant transaction processing</li>
-        <li><strong>Simple and Secure:</strong><br> XYL TestNet is designed to have a simple interface while maintaining the security and integrity of the network.</li>
-        <li><strong>EVM Compatibility:</strong><br> Leverage Ethereum tools, wallets and libraries</li>
-    </ul>
-</section>
-
-<!-- How to Get Started -->
-<section id="get-started">
-    <h2>Network Info</h2>
-    <ul>
-            <li><strong>Network Name:</strong> XYL TestNet</li>
-            <li><strong>New RPC URL:</strong> <code>https://xyl-testnet.glitch.me/rpc/</code></li>
-            <li><strong>Chain ID:</strong> 6934</li>
-            <li><strong>Currency Symbol:</strong> XYL</li>
-    </ol><br>
-<p><b>Connect using </b><a href="https://chainlist.org/chain/6934" class="cta-button" style="font-size: 1rem;">chainlist.org</a> or <a href="https://chainid.network/chain/6934/" class="cta-button" style="font-size: 1rem;">chainid.network</a></p>
-</section>
-
-<section id="benefits">
-    <h2>Benefits for Developers</h2>
-          <ul>
-                    <li><strong>Test New Features Safely:</strong><br> Test your projects on the XYL Testnet without the risk of spending actual money.</li>
-                    <li><strong>Faucets:</strong><br> Get free test tokens to test your dApps or projects without spending actual valuable tokens.</li>
-                    <li><strong>Simple & Straightforward Contract Codes:</strong><br> Contracts can be easily programmed with XYL's own instruction set.</li>
-                    <li><strong>Python support:</strong><br> Interaction with the network is straightforward for developers due to python libraries programmed exclusively for making interaction with the XYL ecosystem easier.</li>
-          </ul>
-</section>
-
-<!-- Roadmap -->
-<section id="roadmap">
-    <h2>Roadmap</h2>
-    <p><strong>Mainnet (Coming Soon):</strong> Stay tuned for the official launch of XYL MainNet!</p>
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 XYL Testnet. All rights reserved. Licensed under the <a>AGPL License</a>.</p>
-    <p><a href="docs.html">Official Documentation</a> | <a href="https://github.com/debxylen">@debxylen</a></p>
-</footer>
-
-
-<script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > window.innerHeight * 1.1) {
-                navbar.classList.add('hide');
-            } else {
-                navbar.classList.remove('hide');
-            }
-        });
-</script>
-
+    <script src="smoothscroll.js"></script>
 </body>
 </html>
